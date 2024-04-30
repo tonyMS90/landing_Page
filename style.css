@@ -1,0 +1,406 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap'); /*letra importada de google fonts*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*que este dentro de la caja*/
+    font-family: "Forum", serif;;
+}
+body{
+    background-image: url(img/faded-gray-background-with-paint-brush-texture.jpg);
+    /* Imagen descargada de la web freepik, diseñado por:<a href="https://www.freepik.es>Imagen de vectorjuice en Freepik</a>*/
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+section{
+    position: relative;/*dado que el contorno principal va a ser absoluta, hacemos esta relativa para trabajar a nuestro gusto*/
+    width: 100%;
+    min-height: 100vh;/*ver el 100 de la pantalla segun como la tengamos en ese momento*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+header{
+    position: absolute;/*por que depende de la posicion del section, ya que esta dentro*/
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;/*con espacion entre ellos*/
+    align-content: center;
+}
+header .logo{
+    color: aliceblue;
+    font-size: 2em; /*utlizo em con el proposito de hacer resposive*/
+    text-decoration: none; /*para quitar la decoracion de la linea*/
+    background: rgb(205, 106, 106);
+    border-radius: 7px;
+    padding:5px 5px;
+    font-weight: 600; /*para que la letra sea grande*/
+    
+}
+header .logo:hover{
+    color: rgb(205, 106, 106);
+    background: rgb(1, 224, 249);
+    transition: 0.8s;/*transicion para que haga el efecto*/
+}
+header .navbar{ /*posicionamos el menu*/
+    position: relative;
+    display: flex;
+}
+header .navbar li{
+    list-style: none;
+    margin-left: 30px;
+}
+header .navbar li a{
+   text-decoration: none;
+   color: rgb(205, 106, 106);
+   font-weight: 600;
+   padding: 10px;
+   transition: 0.5;
+   font-size: 0.9em; 
+}
+header .navbar li a:hover{
+    border-bottom: 5px solid rgb(1, 224, 249);
+    padding: 2px;
+}
+/*contenido web*/
+
+.contenido{
+    position: relative;
+    width: 100%;/*para que ocupe todo el tamaño de la caja*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+}
+.contenido .tituloBox{
+    position: relative;
+    max-width: 600px;
+    text-align: center;
+}
+.contenido .tituloBox h2{
+    font-size: 2.0em;
+    text-transform: uppercase;
+    color: rgb(205, 106, 106);
+}
+.contenido .tituloBox h2 span{
+    color: rgb(205, 106, 106);
+    background: rgb(1, 224, 249);
+    padding: 0 10px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.contenido .tituloBox p{
+    font-size: 1.9em;
+    line-height: 1.5em;
+    color:  rgb(205, 106, 106);
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.contenido .tituloBox a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:rgb(1, 224, 249);
+    background: rgb(205, 106, 106);
+    padding: 10px 20px;
+    margin-left: 30px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    transition: 0,5s;
+}
+.contenido .tituloBox a:hover{
+    color: rgb(205, 106, 106);
+    background: rgb(1, 224, 249);
+    transition: 0,4s;
+
+}
+.contenido .imgBox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: -50px;
+    z-index: -5;
+}
+.contenido .imgBox img{
+    height: 80vh;
+}
+.contenido .imgBox img:hover{
+    height: 80vh;
+}
+
+/*copyright*/
+
+.copyright{
+    position: absolute;
+    bottom: 0px;
+    left: 550px;
+    margin-bottom: 20px;
+    padding:0 100px 30px;
+    display: flex;
+    justify-content: center;
+    
+}
+.copyright p{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    
+}
+
+/*redes sociales*/
+
+.redesSociales{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px 30px;
+    list-style: none;
+}
+.redesSociales li{
+    padding: 10px;
+}
+.redesSociales li a{
+    color: aliceblue;
+    font-size: 2.5em;
+    transition: 0.5s;
+}
+.redesSociales li:hover a{
+    color: rgb(205, 106, 106);
+}
+
+/*CV*/
+
+.fotoCarnet{
+    width: 120px;
+    display: flex;
+    padding-left: 20px;
+}
+header .datosPersonales{
+    display: flex;
+    margin-top: 10px;
+    margin-right: 500px;
+}
+header .datosPersonales li{
+    font-weight: 600;
+    padding: 2px;
+    font-size: 1.0em; 
+    list-style: none;
+}
+.contenido .curriculum{
+    margin-top: 200px;
+    margin-left: 10px;
+}
+.contenido .curriculum h2{
+    color: rgb(205, 106, 106);
+    padding: 5px;
+    text-align: center;
+}
+.contenido .curriculum li{
+    font-size: 1.3em;
+    padding-left: 10px;
+    margin-left: 20px;
+    justify-content: space-between;
+    
+}
+
+/*Proyectos*/
+
+.fondoProyecto{
+    background-image: url(img/creative.jpg);
+    /*Imagen descargada de la web freepik, diseñado por:<a href="https://www.freepik.es>Imagen de rawpixel.com en Freepik</a>*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.fotos{
+    width: 100%;
+    margin-left: 75px;
+    
+}
+.container:after{
+    /*Para que el contender muestre elementos aunque estos sean flotantes*/
+    content: "";
+    display: flex;
+    height: 0px;
+    clear: both;
+}
+.container{
+    width: 90%;
+    margin-top: -1800px;
+    
+}
+
+/*Estructura de cada componente de la galeria (imagen + descripción)*/
+
+.container div{
+    width:28%;
+    height: auto;
+    display: inline;
+    float:left;
+    margin: 0% 5% 0% 0%;
+    padding:0;
+}
+.container div img{
+    width: 350px;
+    height: 250px;
+    box-shadow: 0 0 10px #666;
+    border:5px solid #fff;
+}
+/*Estructura de la descripción, por defecto que no se muestre*/
+.container div a~span{
+    width: 350px;
+    display: block;
+    opacity: 0;
+    margin:0;
+    padding:2px 5px;
+    color:rgb(205, 106, 106);
+    background: rgb(1, 224, 249);
+    box-shadow: 0 0 10px #666;
+    text-align: center;
+}
+/*Se muestre la descripción al posicionar el cursor encima de la imagen*/
+.container div a:hover+span{
+    opacity: 1;
+}
+/*Se especifica el comportamiento que tendrán las imágenes al posicionar el cursor
+encima del contenedor*/
+.container:hover div{
+    opacity: 0.2;
+    transform: scale(0.7);
+    transition: 2s;
+}
+/*Se especifica el comportamiento que tendrá la imagen seleccionada*/
+.container:hover div:hover{
+    opacity: 1;
+    transform: scale(1);
+}
+
+/*formulario*/
+
+.formulario{
+    font-size: 1.5em;
+    color:rgb(205, 106, 106);  
+}
+.formulario .btn{
+    width: 100px;
+    height: 30px;
+    font-size: 1em;
+    background: none;
+    color: rgb(205, 106, 106);
+    border: none;
+    padding:auto;
+    justify-content: space-between;
+    text-align: center; 
+}
+.formulario .btn:hover{
+    background: rgb(205, 106, 106);
+    color: rgb(1, 224, 249);
+    transition: 0,4s;
+}
+.formulario input,textarea{
+    border-color: rgb(1, 224, 249);
+}
+.formulario textarea{
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.formulario fieldset{
+    width: 600px;
+    border-color: rgb(1, 224, 249);
+    padding: 5px;
+
+}
+.logoformulario{
+    margin-left: 32px;
+    color: aliceblue;
+    font-size: 2em; /*utlizo em con el proposito de hacer resposive*/
+    text-decoration: none; /*para quitar la decoracion de la linea*/
+    background: rgb(205, 106, 106);
+    border-radius: 7px;
+    padding:5px 5px;
+    font-weight: 600; 
+}
+
+/*Aplicacion Responsive*/
+/*horas y horas y se me descuadraba todo.. lo he dejado comentado para que veas que al menos lo intente.. pero no cuadraba nada y te lo he comentado*/
+/*
+@media screen and (min-width:576px){
+    .logo{
+        width: 25%;
+        height: 10%;
+    }
+    .imgBox{
+        width: 50%;
+        height: 25%;
+    }
+    .contenido{
+        width: 50%;
+    }
+  .copyright{
+    width: 20%;
+  }
+  .fotos{
+    width: 50%;
+    height: 25%;
+  }
+  .curriculum{
+    width: 50%;
+  }
+}
+
+@media screen and (min-width:992px){
+    
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
